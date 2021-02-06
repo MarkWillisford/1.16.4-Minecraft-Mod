@@ -1,0 +1,30 @@
+modLoader="javafml" 
+loaderVersion="[35,)"
+license="All rights reserved"
+	#issueTrackerURL="http://my.issue.tracker/" 
+	
+[[mods]] 
+modId="jpsbase" 
+version="1.0"
+displayName="Our Mod" 
+	#updateJSONURL="http://myurl.me/"
+	#displayURL="http://example.com/" 
+	#logoFile="examplemod.png" 
+credits="Thanks for this example mod goes to Java" 
+authors="Love, Cheese and small house plants" 
+description='''
+Hallo! This is our very detailed description
+'''
+
+[[dependencies.jpsbase]] 
+    modId="forge" 
+    mandatory=true 
+    versionRange="[35,)" 
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.jpsbase]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.4,1.17)"
+    ordering="NONE"
+    side="BOTH"
