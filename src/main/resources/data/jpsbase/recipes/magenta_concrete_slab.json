@@ -1,0 +1,15 @@
+{
+  "key": {
+    "I": {
+      "item": "minecraft:magenta_concrete"
+    }
+  },
+  "pattern": [
+    "III"
+  ],
+  "result": {
+    "count": 6,
+    "item": "jpsbase:magenta_concrete_slab"
+  },
+  "type": "minecraft:crafting_shaped"
+}

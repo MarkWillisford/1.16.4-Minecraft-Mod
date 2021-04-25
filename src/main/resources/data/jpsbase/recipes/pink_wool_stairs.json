@@ -1,0 +1,17 @@
+{
+  "key": {
+    "I": {
+      "item": "minecraft:pink_wool"
+    }
+  },
+  "pattern": [
+    "I  ",
+    "II ",
+    "III"
+  ],
+  "result": {
+    "count": 4,
+    "item": "jpsbase:pink_wool_stairs"
+  },
+  "type": "minecraft:crafting_shaped"
+}

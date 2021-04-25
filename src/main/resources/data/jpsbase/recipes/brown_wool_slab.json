@@ -1,0 +1,15 @@
+{
+  "key": {
+    "I": {
+      "item": "minecraft:brown_wool"
+    }
+  },
+  "pattern": [
+    "III"
+  ],
+  "result": {
+    "count": 6,
+    "item": "jpsbase:brown_wool_slab"
+  },
+  "type": "minecraft:crafting_shaped"
+}

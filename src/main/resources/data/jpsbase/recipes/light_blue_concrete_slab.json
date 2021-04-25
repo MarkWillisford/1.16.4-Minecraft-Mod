@@ -1,0 +1,15 @@
+{
+  "key": {
+    "I": {
+      "item": "minecraft:light_blue_concrete"
+    }
+  },
+  "pattern": [
+    "III"
+  ],
+  "result": {
+    "count": 6,
+    "item": "jpsbase:light_blue_concrete_slab"
+  },
+  "type": "minecraft:crafting_shaped"
+}

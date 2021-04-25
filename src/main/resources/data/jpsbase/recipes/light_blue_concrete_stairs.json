@@ -1,0 +1,17 @@
+{
+  "key": {
+    "I": {
+      "item": "minecraft:light_blue_concrete"
+    }
+  },
+  "pattern": [
+    "I  ",
+    "II ",
+    "III"
+  ],
+  "result": {
+    "count": 4,
+    "item": "jpsbase:light_blue_concrete_stairs"
+  },
+  "type": "minecraft:crafting_shaped"
+}

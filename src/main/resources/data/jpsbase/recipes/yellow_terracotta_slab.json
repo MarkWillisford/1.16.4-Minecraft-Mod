@@ -1,0 +1,15 @@
+{
+  "key": {
+    "I": {
+      "item": "minecraft:yellow_terracotta"
+    }
+  },
+  "pattern": [
+    "III"
+  ],
+  "result": {
+    "count": 6,
+    "item": "jpsbase:yellow_terracotta_slab"
+  },
+  "type": "minecraft:crafting_shaped"
+}

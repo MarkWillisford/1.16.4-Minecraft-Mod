@@ -1,0 +1,17 @@
+{
+  "key": {
+    "I": {
+      "item": "minecraft:white_terracotta"
+    }
+  },
+  "pattern": [
+    "I  ",
+    "II ",
+    "III"
+  ],
+  "result": {
+    "count": 4,
+    "item": "jpsbase:white_terracotta_stairs"
+  },
+  "type": "minecraft:crafting_shaped"
+}

@@ -1,0 +1,17 @@
+{
+  "key": {
+    "I": {
+      "item": "minecraft:pink_concrete"
+    }
+  },
+  "pattern": [
+    "I  ",
+    "II ",
+    "III"
+  ],
+  "result": {
+    "count": 4,
+    "item": "jpsbase:pink_concrete_stairs"
+  },
+  "type": "minecraft:crafting_shaped"
+}
