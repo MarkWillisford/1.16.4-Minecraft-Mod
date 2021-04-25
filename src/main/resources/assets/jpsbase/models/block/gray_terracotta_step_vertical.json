@@ -1,0 +1,7 @@
+{
+  "parent": "jpsbase:block/step_vertical",
+  "textures": {
+    "0": "block/gray_terracotta",
+    "particle": "block/gray_terracotta"
+  }
+}
