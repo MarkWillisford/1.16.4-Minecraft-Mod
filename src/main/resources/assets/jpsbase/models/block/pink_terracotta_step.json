@@ -1,0 +1,7 @@
+{
+  "parent": "jpsbase:block/step",
+  "textures": {
+    "0": "block/pink_terracotta",
+    "particle": "block/pink_terracotta"
+  }
+}

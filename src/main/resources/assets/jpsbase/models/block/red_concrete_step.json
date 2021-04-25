@@ -1,0 +1,7 @@
+{
+  "parent": "jpsbase:block/step",
+  "textures": {
+    "0": "block/red_concrete",
+    "particle": "block/red_concrete"
+  }
+}

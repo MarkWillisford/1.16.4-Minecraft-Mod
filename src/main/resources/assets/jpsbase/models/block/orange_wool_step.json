@@ -1,0 +1,7 @@
+{
+  "parent": "jpsbase:block/step",
+  "textures": {
+    "0": "block/orange_wool",
+    "particle": "block/orange_wool"
+  }
+}
