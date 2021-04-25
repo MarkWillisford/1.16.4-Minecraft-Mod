@@ -3,6 +3,7 @@ import loot_tables
 import blockstates
 import modelBlock
 import modelItem
+import recipe
 
 # Inputs
 modid = 'jpsbase'
@@ -387,6 +388,7 @@ for item in listOfItems:
       elif shapeName == "stairs":
         # stairs needs a switcher for the models
         listOfFiles.append(File(item.name+"_stairs", basePath + "/data/" + modid + "/loot_tables/blocks",loot_tables.stairs(modid, item.name)))
+        listOfFiles.append(File(item.name+"_stairs", basePath + "/data/" + modid + "/recipes", recipe.stairs(modid, item.name, item.vanilla)))
         listOfFiles.append(File(item.name+"_stairs", basePath + "/assets/" + modid + "/blockstates", blockstates.stairs(modid, item.name)))
         listOfFiles.append(File(item.name+"_stairs", basePath + "/assets/" + modid + "/models/item", modelItem.stairs(modid, item.name)))
         arr = modelBlock.stairs(modid, item.name, vanilla)
@@ -397,7 +399,8 @@ for item in listOfItems:
             modelBlockItem))
       elif shapeName == "slab":
         # slab needs a switcher for the models
-        listOfFiles.append(File(item.name+"_slab", basePath + "/data/" + modid + "/loot_tables/blocks",loot_tables.slab(modid, item.name)))
+        listOfFiles.append(File(item.name+"_slab", basePath + "/data/" + modid + "/loot_tables/blocks", loot_tables.slab(modid, item.name)))
+        listOfFiles.append(File(item.name+"_slab", basePath + "/data/" + modid + "/recipes", recipe.slab(modid, item.name, item.vanilla)))
         listOfFiles.append(File(item.name+"_slab", basePath + "/assets/" + modid + "/blockstates", blockstates.slab(modid, item.name, item.vanilla)))
         listOfFiles.append(File(item.name+"_slab", basePath + "/assets/" + modid + "/models/item", modelItem.slab(modid, item.name)))
         arr = modelBlock.slab(modid, item.name, vanilla)
