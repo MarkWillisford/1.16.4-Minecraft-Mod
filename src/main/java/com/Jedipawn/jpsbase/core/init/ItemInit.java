@@ -125,4 +125,54 @@ public class ItemInit {
 	public static final RegistryObject<BlockItem> BLACK_CONCRETE_STAIRS = ITEMS.register("black_concrete_stairs", () -> new BlockItem(BlockInit.BLACK_CONCRETE_STAIRS.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
 	public static final RegistryObject<BlockItem> BLACK_CONCRETE_SLAB = ITEMS.register("black_concrete_slab", () -> new BlockItem(BlockInit.BLACK_CONCRETE_SLAB.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
 	
+	public static final RegistryObject<BlockItem> GLASS_STAIRS = ITEMS.register("glass_stairs",() -> new BlockItem(BlockInit.GLASS_STAIRS.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	public static final RegistryObject<BlockItem> GLASS_SLAB = ITEMS.register("glass_slab",() -> new BlockItem(BlockInit.GLASS_SLAB.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	
+	public static final RegistryObject<BlockItem> WHITE_STAINED_GLASS_STAIRS = ITEMS.register("white_stained_glass_stairs", () -> new BlockItem(BlockInit.WHITE_STAINED_GLASS_STAIRS.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	public static final RegistryObject<BlockItem> WHITE_STAINED_GLASS_SLAB = ITEMS.register("white_stained_glass_slab", () -> new BlockItem(BlockInit.WHITE_STAINED_GLASS_SLAB.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	
+	public static final RegistryObject<BlockItem> ORANGE_STAINED_GLASS_STAIRS = ITEMS.register("orange_stained_glass_stairs", () -> new BlockItem(BlockInit.ORANGE_STAINED_GLASS_STAIRS.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	public static final RegistryObject<BlockItem> ORANGE_STAINED_GLASS_SLAB = ITEMS.register("orange_stained_glass_slab", () -> new BlockItem(BlockInit.ORANGE_STAINED_GLASS_SLAB.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	
+	public static final RegistryObject<BlockItem> MAGENTA_STAINED_GLASS_STAIRS = ITEMS.register("magenta_stained_glass_stairs", () -> new BlockItem(BlockInit.MAGENTA_STAINED_GLASS_STAIRS.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	public static final RegistryObject<BlockItem> MAGENTA_STAINED_GLASS_SLAB = ITEMS.register("magenta_stained_glass_slab", () -> new BlockItem(BlockInit.MAGENTA_STAINED_GLASS_SLAB.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	
+	public static final RegistryObject<BlockItem> LIGHT_BLUE_STAINED_GLASS_STAIRS = ITEMS.register("light_blue_stained_glass_stairs", () -> new BlockItem(BlockInit.LIGHT_BLUE_STAINED_GLASS_STAIRS.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	public static final RegistryObject<BlockItem> LIGHT_BLUE_STAINED_GLASS_SLAB = ITEMS.register("light_blue_stained_glass_slab", () -> new BlockItem(BlockInit.LIGHT_BLUE_STAINED_GLASS_SLAB.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	
+	public static final RegistryObject<BlockItem> YELLOW_STAINED_GLASS_STAIRS = ITEMS.register("yellow_stained_glass_stairs", () -> new BlockItem(BlockInit.YELLOW_STAINED_GLASS_STAIRS.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	public static final RegistryObject<BlockItem> YELLOW_STAINED_GLASS_SLAB = ITEMS.register("yellow_stained_glass_slab", () -> new BlockItem(BlockInit.YELLOW_STAINED_GLASS_SLAB.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	
+	public static final RegistryObject<BlockItem> LIME_STAINED_GLASS_STAIRS = ITEMS.register("lime_stained_glass_stairs", () -> new BlockItem(BlockInit.LIME_STAINED_GLASS_STAIRS.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	public static final RegistryObject<BlockItem> LIME_STAINED_GLASS_SLAB = ITEMS.register("lime_stained_glass_slab", () -> new BlockItem(BlockInit.LIME_STAINED_GLASS_SLAB.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	
+	public static final RegistryObject<BlockItem> PINK_STAINED_GLASS_STAIRS = ITEMS.register("pink_stained_glass_stairs", () -> new BlockItem(BlockInit.PINK_STAINED_GLASS_STAIRS.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	public static final RegistryObject<BlockItem> PINK_STAINED_GLASS_SLAB = ITEMS.register("pink_stained_glass_slab", () -> new BlockItem(BlockInit.PINK_STAINED_GLASS_SLAB.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	
+	public static final RegistryObject<BlockItem> GRAY_STAINED_GLASS_STAIRS = ITEMS.register("gray_stained_glass_stairs", () -> new BlockItem(BlockInit.GRAY_STAINED_GLASS_STAIRS.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	public static final RegistryObject<BlockItem> GRAY_STAINED_GLASS_SLAB = ITEMS.register("gray_stained_glass_slab", () -> new BlockItem(BlockInit.GRAY_STAINED_GLASS_SLAB.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	
+	public static final RegistryObject<BlockItem> LIGHT_GRAY_STAINED_GLASS_STAIRS = ITEMS.register("light_gray_stained_glass_stairs", () -> new BlockItem(BlockInit.LIGHT_GRAY_STAINED_GLASS_STAIRS.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	public static final RegistryObject<BlockItem> LIGHT_GRAY_STAINED_GLASS_SLAB = ITEMS.register("light_gray_stained_glass_slab", () -> new BlockItem(BlockInit.LIGHT_GRAY_STAINED_GLASS_SLAB.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	
+	public static final RegistryObject<BlockItem> CYAN_STAINED_GLASS_STAIRS = ITEMS.register("cyan_stained_glass_stairs", () -> new BlockItem(BlockInit.CYAN_STAINED_GLASS_STAIRS.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	public static final RegistryObject<BlockItem> CYAN_STAINED_GLASS_SLAB = ITEMS.register("cyan_stained_glass_slab", () -> new BlockItem(BlockInit.CYAN_STAINED_GLASS_SLAB.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	
+	public static final RegistryObject<BlockItem> PURPLE_STAINED_GLASS_STAIRS = ITEMS.register("purple_stained_glass_stairs", () -> new BlockItem(BlockInit.PURPLE_STAINED_GLASS_STAIRS.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	public static final RegistryObject<BlockItem> PURPLE_STAINED_GLASS_SLAB = ITEMS.register("purple_stained_glass_slab", () -> new BlockItem(BlockInit.PURPLE_STAINED_GLASS_SLAB.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	
+	public static final RegistryObject<BlockItem> BLUE_STAINED_GLASS_STAIRS = ITEMS.register("blue_stained_glass_stairs", () -> new BlockItem(BlockInit.BLUE_STAINED_GLASS_STAIRS.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	public static final RegistryObject<BlockItem> BLUE_STAINED_GLASS_SLAB = ITEMS.register("blue_stained_glass_slab", () -> new BlockItem(BlockInit.BLUE_STAINED_GLASS_SLAB.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	
+	public static final RegistryObject<BlockItem> BROWN_STAINED_GLASS_STAIRS = ITEMS.register("brown_stained_glass_stairs", () -> new BlockItem(BlockInit.BROWN_STAINED_GLASS_STAIRS.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	public static final RegistryObject<BlockItem> BROWN_STAINED_GLASS_SLAB = ITEMS.register("brown_stained_glass_slab", () -> new BlockItem(BlockInit.BROWN_STAINED_GLASS_SLAB.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	
+	public static final RegistryObject<BlockItem> GREEN_STAINED_GLASS_STAIRS = ITEMS.register("green_stained_glass_stairs", () -> new BlockItem(BlockInit.GREEN_STAINED_GLASS_STAIRS.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	public static final RegistryObject<BlockItem> GREEN_STAINED_GLASS_SLAB = ITEMS.register("green_stained_glass_slab", () -> new BlockItem(BlockInit.GREEN_STAINED_GLASS_SLAB.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	
+	public static final RegistryObject<BlockItem> RED_STAINED_GLASS_STAIRS = ITEMS.register("red_stained_glass_stairs", () -> new BlockItem(BlockInit.RED_STAINED_GLASS_STAIRS.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	public static final RegistryObject<BlockItem> RED_STAINED_GLASS_SLAB = ITEMS.register("red_stained_glass_slab", () -> new BlockItem(BlockInit.RED_STAINED_GLASS_SLAB.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	
+	public static final RegistryObject<BlockItem> BLACK_STAINED_GLASS_STAIRS = ITEMS.register("black_stained_glass_stairs", () -> new BlockItem(BlockInit.BLACK_STAINED_GLASS_STAIRS.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
+	public static final RegistryObject<BlockItem> BLACK_STAINED_GLASS_SLAB = ITEMS.register("black_stained_glass_slab", () -> new BlockItem(BlockInit.BLACK_STAINED_GLASS_SLAB.get(), new Item.Properties().group(JpsBase.MOD_TAB)));
 }

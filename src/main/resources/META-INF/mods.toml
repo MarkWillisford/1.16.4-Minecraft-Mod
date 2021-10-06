@@ -17,7 +17,7 @@ Hallo! This is our very detailed description
 '''
 
 [[dependencies.jpsbase]] 
-    modId="forge" 
+    modId="forge"
     mandatory=true 
     versionRange="[35,)" 
     ordering="NONE"
@@ -26,5 +26,5 @@ Hallo! This is our very detailed description
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.4,1.17)"
-    ordering="NONE"
+    ordering="NONE"    
     side="BOTH"

@@ -1,0 +1,7 @@
+{
+  "parent": "jpsbase:block/step",
+  "textures": {
+    "0": "block/magenta_stained_glass",
+    "particle": "block/magenta_stained_glass"
+  }
+}

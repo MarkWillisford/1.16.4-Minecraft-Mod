@@ -1,11 +1,14 @@
 package com.Jedipawn.jpsbase.core.init;
 
 import com.Jedipawn.jpsbase.JpsBase;
+import com.Jedipawn.jpsbase.common.blocks.ModSlab;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SlabBlock;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -14,6 +17,30 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import java.util.function.ToIntFunction;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
+import net.minecraft.block.trees.AcaciaTree;
+import net.minecraft.block.trees.BirchTree;
+import net.minecraft.block.trees.DarkOakTree;
+import net.minecraft.block.trees.JungleTree;
+import net.minecraft.block.trees.OakTree;
+import net.minecraft.block.trees.SpruceTree;
+import net.minecraft.entity.EntityType;
+import net.minecraft.fluid.Fluids;
+import net.minecraft.item.DyeColor;
+import net.minecraft.particles.ParticleTypes;
+import net.minecraft.potion.Effects;
+import net.minecraft.state.properties.BedPart;
+import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.tileentity.ShulkerBoxTileEntity;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityType;
+import net.minecraft.util.Direction;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.world.IBlockReader;
+import net.minecraft.world.gen.feature.Features;
 
 public class BlockInit {
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, JpsBase.MOD_ID);
@@ -24,6 +51,10 @@ public class BlockInit {
 					// -1 any, 0 wood, 1 stone & gold, 2 iron, 3 diamond, 4 netherite, 5 modded; 
 					// This needs to be explored more, I don't think it is working, perhaps the material above is conflicting?
 					.harvestLevel(1).setRequiresTool()));
+	
+	private static boolean isntSolid(BlockState state, IBlockReader reader, BlockPos pos) {
+	      return false;
+	   }
 	
 	public static final RegistryObject<Block> MARBLE_SLAB = BLOCKS.register("marble_slab", () -> new SlabBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.25f, 7.25f).harvestLevel(1).setRequiresTool()));
 	public static final RegistryObject<Block> MARBLE_STAIRS = BLOCKS.register("marble_stairs", () -> new StairsBlock(() -> Blocks.STONE.getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.25f, 7.25f).harvestLevel(1).setRequiresTool()));
@@ -130,4 +161,55 @@ public class BlockInit {
 	public static final RegistryObject<Block> BLACK_CONCRETE_STAIRS = BLOCKS.register("black_concrete_stairs", () -> new StairsBlock(() -> Blocks.BLACK_CONCRETE.getDefaultState(), Block.Properties.create(Material.ROCK, DyeColor.BLACK).hardnessAndResistance(1.8F)));
 	public static final RegistryObject<Block> BLACK_CONCRETE_SLAB = BLOCKS.register("black_concrete_slab", () -> new SlabBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.8F)));
 	
+	public static final RegistryObject<Block> GLASS_STAIRS = BLOCKS.register("glass_stairs",() -> new StairsBlock(() -> Blocks.GLASS.getDefaultState(), Block.Properties.create(Material.GLASS).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	public static final RegistryObject<Block> GLASS_SLAB = BLOCKS.register("glass_slab",() -> new ModSlab(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	
+	public static final RegistryObject<Block> WHITE_STAINED_GLASS_STAIRS = BLOCKS.register("white_stained_glass_stairs", () -> new StairsBlock(() -> Blocks.WHITE_STAINED_GLASS.getDefaultState(), Block.Properties.create(Material.GLASS, DyeColor.WHITE).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	public static final RegistryObject<Block> WHITE_STAINED_GLASS_SLAB = BLOCKS.register("white_stained_glass_slab", () -> new SlabBlock(Block.Properties.create(Material.GLASS, DyeColor.WHITE).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	
+	public static final RegistryObject<Block> ORANGE_STAINED_GLASS_STAIRS = BLOCKS.register("orange_stained_glass_stairs", () -> new StairsBlock(() -> Blocks.ORANGE_STAINED_GLASS.getDefaultState(), Block.Properties.create(Material.GLASS, DyeColor.ORANGE).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	public static final RegistryObject<Block> ORANGE_STAINED_GLASS_SLAB = BLOCKS.register("orange_stained_glass_slab", () -> new ModSlab(Block.Properties.create(Material.GLASS, DyeColor.ORANGE).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	
+	public static final RegistryObject<Block> MAGENTA_STAINED_GLASS_STAIRS = BLOCKS.register("magenta_stained_glass_stairs", () -> new StairsBlock(() -> Blocks.MAGENTA_STAINED_GLASS.getDefaultState(), Block.Properties.create(Material.GLASS, DyeColor.MAGENTA).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	public static final RegistryObject<Block> MAGENTA_STAINED_GLASS_SLAB = BLOCKS.register("magenta_stained_glass_slab", () -> new SlabBlock(Block.Properties.create(Material.GLASS, DyeColor.MAGENTA).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	
+	public static final RegistryObject<Block> LIGHT_BLUE_STAINED_GLASS_STAIRS = BLOCKS.register("light_blue_stained_glass_stairs", () -> new StairsBlock(() -> Blocks.LIGHT_BLUE_STAINED_GLASS.getDefaultState(), Block.Properties.create(Material.GLASS, DyeColor.LIGHT_BLUE).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	public static final RegistryObject<Block> LIGHT_BLUE_STAINED_GLASS_SLAB = BLOCKS.register("light_blue_stained_glass_slab", () -> new SlabBlock(Block.Properties.create(Material.GLASS, DyeColor.LIGHT_BLUE).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	
+	public static final RegistryObject<Block> YELLOW_STAINED_GLASS_STAIRS = BLOCKS.register("yellow_stained_glass_stairs", () -> new StairsBlock(() -> Blocks.YELLOW_STAINED_GLASS.getDefaultState(), Block.Properties.create(Material.GLASS, DyeColor.YELLOW).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	public static final RegistryObject<Block> YELLOW_STAINED_GLASS_SLAB = BLOCKS.register("yellow_stained_glass_slab", () -> new SlabBlock(Block.Properties.create(Material.GLASS, DyeColor.YELLOW).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	
+	public static final RegistryObject<Block> LIME_STAINED_GLASS_STAIRS = BLOCKS.register("lime_stained_glass_stairs", () -> new StairsBlock(() -> Blocks.LIME_STAINED_GLASS.getDefaultState(), Block.Properties.create(Material.GLASS, DyeColor.LIME).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	public static final RegistryObject<Block> LIME_STAINED_GLASS_SLAB = BLOCKS.register("lime_stained_glass_slab", () -> new SlabBlock(Block.Properties.create(Material.GLASS, DyeColor.LIME).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	
+	public static final RegistryObject<Block> PINK_STAINED_GLASS_STAIRS = BLOCKS.register("pink_stained_glass_stairs", () -> new StairsBlock(() -> Blocks.PINK_STAINED_GLASS.getDefaultState(), Block.Properties.create(Material.GLASS, DyeColor.PINK).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	public static final RegistryObject<Block> PINK_STAINED_GLASS_SLAB = BLOCKS.register("pink_stained_glass_slab", () -> new SlabBlock(Block.Properties.create(Material.GLASS, DyeColor.PINK).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	
+	public static final RegistryObject<Block> GRAY_STAINED_GLASS_STAIRS = BLOCKS.register("gray_stained_glass_stairs", () -> new StairsBlock(() -> Blocks.GRAY_STAINED_GLASS.getDefaultState(), Block.Properties.create(Material.GLASS, DyeColor.GRAY).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	public static final RegistryObject<Block> GRAY_STAINED_GLASS_SLAB = BLOCKS.register("gray_stained_glass_slab", () -> new SlabBlock(Block.Properties.create(Material.GLASS, DyeColor.GRAY).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	
+	public static final RegistryObject<Block> LIGHT_GRAY_STAINED_GLASS_STAIRS = BLOCKS.register("light_gray_stained_glass_stairs", () -> new StairsBlock(() -> Blocks.LIGHT_GRAY_STAINED_GLASS.getDefaultState(), Block.Properties.create(Material.GLASS, DyeColor.LIGHT_GRAY).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	public static final RegistryObject<Block> LIGHT_GRAY_STAINED_GLASS_SLAB = BLOCKS.register("light_gray_stained_glass_slab", () -> new SlabBlock(Block.Properties.create(Material.GLASS, DyeColor.LIGHT_GRAY).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	
+	public static final RegistryObject<Block> CYAN_STAINED_GLASS_STAIRS = BLOCKS.register("cyan_stained_glass_stairs", () -> new StairsBlock(() -> Blocks.CYAN_STAINED_GLASS.getDefaultState(), Block.Properties.create(Material.GLASS, DyeColor.CYAN).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	public static final RegistryObject<Block> CYAN_STAINED_GLASS_SLAB = BLOCKS.register("cyan_stained_glass_slab", () -> new SlabBlock(Block.Properties.create(Material.GLASS, DyeColor.CYAN).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	
+	public static final RegistryObject<Block> PURPLE_STAINED_GLASS_STAIRS = BLOCKS.register("purple_stained_glass_stairs", () -> new StairsBlock(() -> Blocks.PURPLE_STAINED_GLASS.getDefaultState(), Block.Properties.create(Material.GLASS, DyeColor.PURPLE).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	public static final RegistryObject<Block> PURPLE_STAINED_GLASS_SLAB = BLOCKS.register("purple_stained_glass_slab", () -> new SlabBlock(Block.Properties.create(Material.GLASS, DyeColor.PURPLE).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	
+	public static final RegistryObject<Block> BLUE_STAINED_GLASS_STAIRS = BLOCKS.register("blue_stained_glass_stairs", () -> new StairsBlock(() -> Blocks.BLUE_STAINED_GLASS.getDefaultState(), Block.Properties.create(Material.GLASS, DyeColor.BLUE).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	public static final RegistryObject<Block> BLUE_STAINED_GLASS_SLAB = BLOCKS.register("blue_stained_glass_slab", () -> new SlabBlock(Block.Properties.create(Material.GLASS, DyeColor.BLUE).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	
+	public static final RegistryObject<Block> BROWN_STAINED_GLASS_STAIRS = BLOCKS.register("brown_stained_glass_stairs", () -> new StairsBlock(() -> Blocks.BROWN_STAINED_GLASS.getDefaultState(), Block.Properties.create(Material.GLASS, DyeColor.BROWN).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	public static final RegistryObject<Block> BROWN_STAINED_GLASS_SLAB = BLOCKS.register("brown_stained_glass_slab", () -> new SlabBlock(Block.Properties.create(Material.GLASS, DyeColor.BROWN).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	
+	public static final RegistryObject<Block> GREEN_STAINED_GLASS_STAIRS = BLOCKS.register("green_stained_glass_stairs", () -> new StairsBlock(() -> Blocks.GREEN_STAINED_GLASS.getDefaultState(), Block.Properties.create(Material.GLASS, DyeColor.GREEN).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	public static final RegistryObject<Block> GREEN_STAINED_GLASS_SLAB = BLOCKS.register("green_stained_glass_slab", () -> new SlabBlock(Block.Properties.create(Material.GLASS, DyeColor.GREEN).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	
+	public static final RegistryObject<Block> RED_STAINED_GLASS_STAIRS = BLOCKS.register("red_stained_glass_stairs", () -> new StairsBlock(() -> Blocks.RED_STAINED_GLASS.getDefaultState(), Block.Properties.create(Material.GLASS, DyeColor.RED).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	public static final RegistryObject<Block> RED_STAINED_GLASS_SLAB = BLOCKS.register("red_stained_glass_slab", () -> new SlabBlock(Block.Properties.create(Material.GLASS, DyeColor.RED).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	
+	public static final RegistryObject<Block> BLACK_STAINED_GLASS_STAIRS = BLOCKS.register("black_stained_glass_stairs", () -> new StairsBlock(() -> Blocks.BLACK_STAINED_GLASS.getDefaultState(), Block.Properties.create(Material.GLASS, DyeColor.BLACK).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+	public static final RegistryObject<Block> BLACK_STAINED_GLASS_SLAB = BLOCKS.register("black_stained_glass_slab", () -> new SlabBlock(Block.Properties.create(Material.GLASS, DyeColor.BLACK).hardnessAndResistance(0.3F).sound(SoundType.GLASS).notSolid()));
+
 }
